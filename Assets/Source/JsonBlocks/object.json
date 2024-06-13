@@ -1,0 +1,131 @@
+[
+  {
+    "type": "object_get",
+    "message0": "%1",
+    "args0": [
+      {
+        "type": "field_object",
+        "name": "OBJECT",
+      }
+    ],
+    "output": "Object",
+    "extensions": ["contextMenu_variableSetterGetter"]
+  },
+
+  {
+    "type": "object_jump",
+    "message0": "Object %1 Jump Power %2",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "OBJECT",
+        "check": "Object",
+      },
+      {
+        "type": "input_value",
+        "name": "VAR",
+        "check": "Number",
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "inputsInline": true,
+  },
+
+  {
+    "type": "object_turn",
+    "message0": "Object %1 Direction %2 Angle %3 Mode %4 %5",
+    "args0": 
+    [
+      {
+        "type": "input_value",
+        "name": "OBJECT",
+        "check": "Object",
+      },
+      {
+        "type": "field_dropdown",
+        "name": "DIRECTION",
+        "options": 
+        [
+          ["Left", "LEFT"],
+          ["Right", "RIGHT"]
+        ],
+      },
+      {
+        "type": "input_value",
+        "name": "ANGLE",
+        "check": "Number",
+      },
+      {
+        "type": "field_dropdown",
+        "name": "MODE",
+        "options": [
+          ["Speed", "SPEED"],
+          ["Second", "SECOND"]
+        ],
+      },
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "check": "Number",
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+  },
+
+  {
+    "type": "object_actions",
+    "message0": "Object Actions",
+    "args0": 
+    [
+      {
+        "type": "input_value",
+       "name": "OBJECT",
+       "check": "Object",
+      },
+    ],
+    "mutator": "object_action_mutator",
+    "previousStatement": null,
+    "nextStatement": null,
+  },
+
+  {
+    "type": "object_move",
+    "message0": "%1 Object %2 X%3 Y%4 Z%5",
+    "args0": 
+    [
+      {
+        "type": "field_dropdown",
+        "name": "MODE",
+        "options": [
+          ["Position", "POSITION"],
+          ["Rotation", "ROTATION"],
+          ["Scale", "SCALE"]
+        ],
+      },
+      {
+        "type": "input_value",
+        "name": "OBJECT",
+        "check": "Object",
+      },
+      {
+        "type": "input_value",
+        "name": "X",
+        "check": "Number",
+      },
+      {
+        "type": "input_value",
+        "name": "Y",
+        "check": "Number",
+      },
+      {
+        "type": "input_value",
+        "name": "Z",
+        "check": "Number",
+      },
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+  },
+]
